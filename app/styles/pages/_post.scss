@@ -1,0 +1,32 @@
+// post page
+
+.post {
+  font-size: 1.1em;
+
+  .header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    background-color: lightblue;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: .5em;
+  }
+
+  textarea {
+    font-size: 1em;
+    height: 300px;
+    line-height: 1.5em;
+    resize: none;
+    width: 100%;
+  }
+
+  .content * {
+    max-width: 100%;
+  }
+
+}

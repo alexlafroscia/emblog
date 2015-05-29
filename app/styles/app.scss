@@ -1,0 +1,17 @@
+// Components
+@import 'components/post-item';
+
+// Pages
+@import 'pages/post';
+
+html,
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.6em;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+

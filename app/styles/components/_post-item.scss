@@ -1,0 +1,18 @@
+// post-item components
+.post-item {
+  padding: 30px;
+
+  &:hover {
+    color: blue;
+    cursor: pointer;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  & + & {
+    border-top: 1px solid black;
+  }
+}
+
