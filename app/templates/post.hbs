@@ -10,11 +10,17 @@
     </button>
   </div>
 
-  {{#if editing}}
-    {{textarea value=model.body}}
-  {{/if}}
-
   <div class="content">
-    {{mark-down model.body}}
+
+    {{#if editing}}
+      <div class="editor">
+        {{textarea value=model.body}}
+      </div>
+    {{/if}}
+
+    <div class="rendered">
+      {{mark-down model.body}}
+    </div>
+
   </div>
 </div>
