@@ -1,5 +1,5 @@
 <ul class="list-unstyled">
-  {{#each model as |post|}}
+  {{#each model key='id' as |post|}}
     <li>
       <h2>{{link-to post.title 'posts.post' post}}</h2>
       <p>{{post.snippet}}</p>
