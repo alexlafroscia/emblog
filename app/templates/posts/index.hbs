@@ -1,0 +1,12 @@
+<ul class="list-unstyled">
+  {{#each model as |post|}}
+    <li>
+      <h2>{{link-to post.title 'posts.post' post}}</h2>
+      <p>{{post.snippet}}</p>
+    </li>
+  {{else}}
+    <li>
+      <p>There are no posts, yet!</p>
+    </li>
+  {{/each}}
+</ul>
