@@ -1,26 +1,7 @@
-<div class="post">
-  <div class="header">
-    <h1>{{model.title}}</h1>
-    <button {{action 'toggleEditing'}}>
-      {{#if editing}}
-        Save
-      {{else}}
-        Edit
-      {{/if}}
-    </button>
-  </div>
+<!-- Template: posts/post -->
 
-  <div class="content">
-
-    {{#if editing}}
-      <div class="editor">
-        {{textarea value=model.body}}
-      </div>
-    {{/if}}
-
-    <div class="rendered">
-      {{mark-down model.body}}
-    </div>
-
-  </div>
-</div>
+<!--
+  title and body are in the controller's context
+  postTitle and postBody are set inside the component
+-->
+{{my-post postTitle=title postBody=body }}

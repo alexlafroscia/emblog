@@ -1,14 +1,43 @@
 <form>
-  <div class="form-group">
-    <label>Email address</label>
-    {{input type='text' class='form-control' value=title placeholder='Post Title'}}
+  <!-- Editor -->
+  <div class="form-group {{if errors.title 'has-error'}}">
+    <label class='control-label'>Title</label>
+
+
+
+    {{input type='text'
+            class='form-control'
+            value=title
+            placeholder='Post Title'}}
+
+
+
+    {{#if errors.title}}
+      <span class="help-block">{{errors.title}}</span>
+    {{/if}}
   </div>
-  <div class="form-group">
-    <label>Password</label>
-    {{textarea class='form-control' value=body placeholder='Post Body, Markdown Supported!' rows='10'}}
+  <div class="form-group {{if errors.body 'has-error'}}">
+    <label class='control-label'>Body</label>
+
+
+
+    {{textarea class='form-control'
+              value=body
+              placeholder='Post Body, Markdown Supported!'
+              rows='10'}}
+
+
+
+    {{#if errors.body}}
+      <span class="help-block">{{errors.body}}</span>
+    {{/if}}
   </div>
-  <div class="form-group">
-    {{mark-down body}}
-  </div>
-  <button {{action 'save'}} type="submit" class="btn btn-default">Submit</button>
+
+  <!-- Render Blog Post -->
+  <label class='control-label'>Rendered Post</label>
+  {{my-post postTitle=title postBody=body }}
+
+  <!-- Save -->
+  <hr />
+  <button {{action 'save'}} type="submit" class="btn btn-primary">Submit</button>
 </form>

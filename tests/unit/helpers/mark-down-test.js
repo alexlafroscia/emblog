@@ -5,6 +5,6 @@ module('Unit | Helper | mark down');
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  var result = markDown(42);
+  var result = markDown('This is a string');
   assert.ok(result);
 });
